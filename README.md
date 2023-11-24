@@ -23,6 +23,8 @@ To integrate `SweetSymbols` into your Xcode project using **Swift Package Manage
 let myImage = UIImage(symbolName: .circle)
 // or
 let myImage = Image(symbolName: .circle)
+// and
+let myImage = Image(symbolName: .circle, variableValue: 0.3)
 ```
 
 ### Creating Labels with System Icons
@@ -39,14 +41,14 @@ let myLabel = Label(titleKey: "SomeLocalizedKey", symbolName: .circle)
 
 ```swift
 // Specify a trait collection
-let myImage = UIImage(symbolName: .arrowtriangleUpFill, compatibleWith: myTraitCollection)
+let myImage = UIImage(symbolName: .circle, compatibleWith: myTraitCollection)
 
 // Specify a configuration
-let myImage = UIImage(symbolName: .arrowtriangleUpFill, withConfiguration: myConfiguration)
+let myImage = UIImage(symbolName: .circle, withConfiguration: myConfiguration)
 
 // Specify a variable value and configuration (requires iOS 16.0)
 if #available(iOS 16.0, *) {
-    let myImage = UIImage(symbolName: .arrowtriangleUpFill, variableValue: 0.5, configuration: myConfiguration)
+    let myImage = UIImage(symbolName: .circle, variableValue: 0.5, configuration: myConfiguration)
 }
 ```
 
