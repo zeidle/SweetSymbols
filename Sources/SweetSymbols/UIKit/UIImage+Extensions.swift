@@ -1,4 +1,4 @@
-
+#if canImport(UIKit)
 import UIKit
 
 public extension UIImage {
@@ -13,7 +13,7 @@ public extension UIImage {
     /// Creates an image object that contains a system symbol image appropriate for the specified traits.
     ///
     /// - Parameters:
-    ///   - symbolName: The name of the system SFSymbol image.
+    ///   - name: The name of the system SFSymbol image.
     ///   - traitCollection: The traits associated with the intended environment for the image. Use this parameter to ensure that the correct variant of the image is loaded. If you specify nil, this method uses the traits associated with the main screen.
     convenience init?(symbolName name: SFSymbols, compatibleWith traitCollection: UITraitCollection?) {
         self.init(systemName: name.rawValue, compatibleWith: traitCollection)
@@ -42,3 +42,4 @@ public extension UIImage {
         self.init(systemName: name.rawValue, variableValue: value, configuration: configuration)
     }
 }
+#endif
