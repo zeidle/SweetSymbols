@@ -9,7 +9,7 @@ public extension Label where Title == Text, Icon == Image {
     /// - Parameters:
     ///   - titleKey: A title generated from a localized string.
     ///   - symbolName: The name of the system SFSymbol image.
-    init(titleKey: LocalizedStringKey, symbolName: SFSymbols) {
+    init(_ titleKey: LocalizedStringKey, symbolName: SFSymbols) {
         self.init(titleKey, systemImage: symbolName.rawValue)
     }
 }
